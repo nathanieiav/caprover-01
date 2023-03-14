@@ -36,7 +36,7 @@ function App() {
       <button onClick={handleClick}>bitch</button>
       <div
         className="light"
-        style={{ backgroundColor: 'red', width: '100px', height: '100px' }}
+        style={{ backgroundColor: 'black', width: '100px', height: '100px' }}
       ></div>
     </div>
   )
