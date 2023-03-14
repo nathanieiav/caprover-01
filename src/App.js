@@ -20,7 +20,7 @@ function App() {
       const result = await response.json()
 
       console.log('result is: ', JSON.stringify(result, null, 4))
-
+      console.log(getTrue)
       setTrue(true)
     } catch (err) {
       console.log(err)
