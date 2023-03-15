@@ -16,4 +16,4 @@ jobs:
       - name: Install Caprover
         run: npm install -g caprover
       - name: Deploy
-        run: caprover deploy -h '${{ secrets.CAPROVER_ROOT_URL }}' -p '${{ secrets.CAPROVER_PASSWORD }}' -b 'staging' -a '${{ secrets.CAPROVER_APP }}'
+        run: caprover deploy -h '${{ secrets.CAPROVER_ROOT_URL }}' -p '${{ secrets.CAPROVER_PASSWORD }}' -b 'main' -a '${{ secrets.CAPROVER_APP }}'
