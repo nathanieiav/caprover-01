@@ -1,0 +1,19 @@
+name: Deploy to Main
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy-to-staging:
+    name: Deploy to Main
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Node Setup
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: Install Caprover
+        run: npm install -g caprover
+      - name: Deploy
+        run: caprover deploy -h '${{ secrets.CAPROVER_ROOT_URL }}' -p '${{ secrets.CAPROVER_PASSWORD }}' -b 'staging' -a '${{ secrets.CAPROVER_APP }}'
